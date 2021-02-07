@@ -1,4 +1,6 @@
-@import 'reset';
-@import 'globals';
-@import 'layout';
-@import 'components';
+@use 'globals/reset';
+@use 'globals/root';
+@use 'globals/globals';
+
+@use 'layout';
+@use 'components';

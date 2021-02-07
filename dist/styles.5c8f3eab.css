@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/*#region  reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+/*#endregion  reset */
+/*#region +++ROOT+++ */
+:root {
+  --primary-300: hsl(321, 100%, 78%);
+  /* lightPink */
+  --primary-500: hsl(322, 100%, 66%);
+  /* pink */
+  --primary-700: hsl(0, 100%, 63%);
+  /* lightRed*/
+  --neutral-100: hsl(0, 0%, 100%);
+  /* white */
+  --neutral-200: hsl(207, 100%, 98%);
+  /*Very Pale Blue */
+  --neutral-800: hsl(192, 100%, 9%);
+  /* Very Dark Cyan*/
+  --neutral-900: hsl(0, 0%, 0%);
+  /* black */
+  --ff-base: "Open Sans", sans-serif;
+  --ff-accent: "Poppins", sans-serif;
+  --fs-400: 1rem;
+  --fs-h1: clamp(1.5rem, 0.8653rem + 2.8209vw, 2.75rem);
+  --fs-h2: clamp(1.25rem, 0.7549rem + 2.2003vw, 2.225rem);
+  --fs-stats: clamp(3rem, 2.6192rem + 1.6925vw, 3.75rem);
+  --fw-400: 400;
+  --fw-600: 600;
+  --fw-700: 700;
+}
+
+/*#region +++ROOT+++ */
+/*#region +++BASE+++ */
+body {
+  position: relative;
+  font-family: var(--ff-base);
+  background-color: var(--neutral-100);
+  min-height: 100vh;
+  font-size: var(--fs-400);
+  line-height: 1.6;
+  color: var(--neutral-800);
+}
+@media (max-width: 23.4rem) {
+  body {
+    font-size: 70%;
+  }
+}
+
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-700);
+}
+
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-700);
+}
+
+/*#endregion +++BASE+++ */
+.site-wrapper {
+  position: relative;
+  max-width: 66.8125rem;
+  margin: 0 auto;
+}
+
+.share {
+  width: 100%;
+  max-width: 22rem;
+  height: 12.5rem;
+  padding: 0 2.5rem;
+  margin-bottom: 1rem;
+  background-color: var(--neutral-500);
+  border-radius: 0.75rem 6rem 0.75rem 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media (min-width: 62rem) {
+  .share {
+    margin: 0 2rem 0 0;
+  }
+}
+.share-icons {
+  display: flex;
+  align-items: center;
+}
+.share-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--neutral-600);
+  border-radius: 0.5rem;
+}
+.share-icons * + * {
+  margin-left: 1rem;
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 33.75rem;
+  height: 10rem;
+  padding: 2rem;
+  margin-bottom: 1rem;
+  background-color: var(--neutral-500);
+  border-radius: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+@media (min-width: 62rem) {
+  .slider-container {
+    margin: 0;
+  }
+}
+.slider-container .bar {
+  display: inline-block;
+  position: absolute;
+  z-index: 3;
+  left: 2px;
+  top: 50%;
+  width: 5rem;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #ff0000;
+  overflow: hidden;
+}
+.slider-container .bar, .slider-container .fill {
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: #6200ee;
+}
+
+#left {
+  color: green;
+}
+
+.bold {
+  display: inline-block;
+  font-weight: 700;
+  width: 6.5ch;
+  text-align: right;
+}
+
+.left {
+  display: inline-block;
+  text-align: right;
+  width: 7ch;
+  font-weight: 700;
+  font-size: larger;
+}
+
+.caption {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.space-left {
+  position: absolute;
+  width: max-content;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  background-color: var(--neutral-100);
+  color: green;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: var(--fw-700);
+}
+@media (min-width: 62rem) {
+  .space-left {
+    background-color: var(--neutral-100);
+    top: 0%;
+    left: 100%;
+    transform: translate(calc(-100% - 2rem), calc(-50% - 1rem));
+  }
+  .space-left::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    transform: translateY(50%);
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 1.25rem solid transparent;
+    border-bottom: 1.25rem solid transparent;
+    border-right: 1.25rem solid var(--neutral-100);
+  }
+}
+.space-left .small {
+  font-size: 1rem;
+  color: var(--neutral-300);
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+
+/*  TO DO
+Fix the white sèace around the Firefox slider */
+input[type=range] {
+  -webkit-appearance: none;
+  height: 0.625rem;
+  border-radius: 1rem;
+  max-width: 29.5rem;
+  overflow: hidden;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  background: var(--neutral-600);
+  border-radius: 0.25rem;
+  height: 0.625rem;
+  cursor: pointer;
+  color: red;
+}
+input[type=range]::-moz-range-track {
+  background: var(--neutral-600);
+  border-radius: 0.25rem;
+  height: 0.625rem;
+  cursor: pointer;
+  color: red;
+}
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 0.625rem;
+  width: 0.625rem;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  box-shadow: -1rem 0 0 0.8rem #ff4d97, -2rem 0 0 1.5rem #ff579d, -3rem 0 0 2.5rem #ff61a3, -4rem 0 0 3.5rem #ff6ba9, -5rem 0 0 4.5rem #ff75af, -6rem 0 0 5.5rem #ff80b5, -7rem 0 0 6.5rem #ff8abb, -8rem 0 0 7.5rem #ff94c1, -9rem 0 0 8.5rem #ff9ec6, -10rem 0 0 9.5rem #ffa3c9, -11rem 0 0 10.5rem #ffa8cc, -12rem 0 0 11.5rem #ffadcf, -13rem 0 0 12.5rem #ffb3d2, -14rem 0 0 13.5rem #ffb8d5, -15rem 0 0 14.5rem #ffbdd8, -30rem 0 0 29.3rem #ffc2db;
+  cursor: pointer;
+}
+input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 0.625rem;
+  width: 0.625rem;
+  background: white;
+  border-radius: 50%;
+  border: none;
+  margin-top: -7px;
+  box-shadow: -1rem 0 0 0.8rem #ff4d97, -2rem 0 0 1.5rem #ff579d, -3rem 0 0 2.5rem #ff61a3, -4rem 0 0 3.5rem #ff6ba9, -5rem 0 0 4.5rem #ff75af, -6rem 0 0 5.5rem #ff80b5, -7rem 0 0 6.5rem #ff8abb, -8rem 0 0 7.5rem #ff94c1, -9rem 0 0 8.5rem #ff9ec6, -10rem 0 0 9.5rem #ffa3c9, -11rem 0 0 10.5rem #ffa8cc, -12rem 0 0 11.5rem #ffadcf, -13rem 0 0 12.5rem #ffb3d2, -14rem 0 0 13.5rem #ffb8d5, -15rem 0 0 14.5rem #ffbdd8, -30rem 0 0 29.3rem #ffc2db;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=/styles.5c8f3eab.css.map */

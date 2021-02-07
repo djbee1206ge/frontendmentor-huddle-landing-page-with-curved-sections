@@ -1,72 +1,7 @@
-.challenge-wrapper {
+.site-wrapper {
   position: relative;
-  width: 100%;
-  max-width: 90rem;
-  min-height: 50rem;
-  height: 50rem;
-  padding: 2.25rem 1.5rem;
-  background-color: var(--neutral-600);
-  overflow: hidden;
-  margin-bottom: 2.625rem;
-  box-shadow: var(--bs-200);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url(../images/bg-mobile.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  @media (min-width: 62rem) {
-    background-image: url(../images/bg-desktop.png);
-    background-size: contain;
-    background-position: bottom;
-  }
- 
+  max-width: 66.8125rem;
+  margin:  0 auto;
+  
 
-}
-.container {
-   @media (min-width: 62rem) {
-    
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: row;
-  }
-}
-
-
-.attribution {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-top: 0.0625rem solid var(--neutral-300);
-  background-color: var(--neutral-500);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.25rem;
-  padding: 1rem 0;
-  text-align: center;
-  color: var(--neutral-100);
-  font-size: var(--fs-400);
-  * {
-    margin-right: 2rem;
-  }
-  a {
-    color: var(--primary-800);
-    letter-spacing: 0.1rem;
-    text-decoration: none;
-    margin-left: 0.25rem;
-    &:hover, & :focus {
-      text-decoration: underline;
-    }
-    &:active {
-      transform: scale(0.98);
-    }
-    
-  }
 }

@@ -1,0 +1,24 @@
+{
+  "name": "frontendmentor-huddle-landing-page-with-curved-sections",
+  "version": "1.0.0",
+  "description": "Practicing basic html css layouts",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/djbee1206ge/frontendmentor-huddle-landing-page-with-curved-sections.git"
+  },
+  "author": "David Beecheno",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/djbee1206ge/frontendmentor-huddle-landing-page-with-curved-sections/issues"
+  },
+  "homepage": "https://github.com/djbee1206ge/frontendmentor-huddle-landing-page-with-curved-sections#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.6"
+  }
+}
